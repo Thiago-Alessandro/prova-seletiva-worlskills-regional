@@ -1,0 +1,24 @@
+<div class="h-full w-screen bg-[#a8a8a8] px-[10%] flex justify-center items-center py-4">
+    <div class="justify-center items-start w-full h-full grid grid-cols-3 gap-4" >
+        <div *ngFor="let cell of celulares" class="felx justify-center items-center bg-pink-200 w-96 rounded-md overflow-clip h-full">
+            <img class="h-[80%] w-full" src="../../assets/{{cell.imagem}}" alt="">
+            <div class="flex flex-col justify-start items-center gap-4 w-full bg-[#272727] h-full pt-4">
+                <p class="text-white">{{cell.descricao}}</p>
+                <div class="flex justify-center items-center gap-2">
+                    <div class="flex gap-2">
+                        <img class="w-4 aspect-square" src="../../assets/like.svg" alt="" (click)="like(cell)">
+                        <p>{{cell.likes}}</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <img class="w-4 aspect-square text-white" src="../../assets/dislike.svg" alt="" (click)="dislike(cell)">
+                        <p>{{cell.dislikes}}</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <img class="w-4 aspect-square text-white  fill-white" src="../../assets/comments.svg" alt="" (click)="redirectComments(cell)">
+                        <p>{{cell.comments}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

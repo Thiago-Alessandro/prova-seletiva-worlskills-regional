@@ -1,0 +1,8 @@
+<div class =  "flex flex-col h-screen w-screen justify-center items-center bg-[#a8a8a8]">
+    <div class="flex flex-col justify-center items-center w-full h-full gap-4">
+        <div class="text-xl">Login</div>
+        <input class="w-[380px] h-12 p-4 " [(ngModel)]="email" type="text"  placeholder="Email">
+        <input class="w-[380px] h-12 p-4" [(ngModel)]="password" type="password"  placeholder="Senha">
+        <button class="w-[380px] h-12 bg-[#272727] text-[#a8a8a8]" (click)="login()">Entrar</button>
+    </div>
+</div>
